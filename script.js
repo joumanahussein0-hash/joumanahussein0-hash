@@ -39,31 +39,24 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    const accordionButtons = document.querySelectorAll('.accordion-btn');
-    if (accordionButtons.length) {
-        accordionButtons.forEach(button => {
-            button.addEventListener('click', function () {
-                const content = this.nextElementSibling;
-                if (content) content.classList.toggle('show');
-            });
+    // Attach toggle behavior to each project header ('.project h3').
+    const projectHeaders = document.querySelectorAll('.project h3');
+    projectHeaders.forEach(header => {
+        const project = header.parentElement;
+        if (!project) return;
+        header.style.cursor = 'pointer';
+        // Ensure non-header children have a deterministic display value (don't override explicit "none").
+        Array.from(project.children).forEach(child => {
+            if (child === header) return;
+            if (!child.style.display) child.style.display = '';
         });
-    } else {
-        const projects = document.querySelectorAll('.project');
-        projects.forEach(project => {
-            const header = project.querySelector('h3');
-            if (!header) return;
-            header.style.cursor = 'pointer';
+        header.addEventListener('click', function () {
             Array.from(project.children).forEach(child => {
-                if (child !== header) child.style.display = child.style.display || '';
-            });
-            header.addEventListener('click', function () {
-                Array.from(project.children).forEach(child => {
-                    if (child === header) return;
-                    child.style.display = (child.style.display === 'none') ? '' : 'none';
-                });
+                if (child === header) return;
+                child.style.display = (child.style.display === 'none') ? '' : 'none';
             });
         });
-    }
+    });
 });
 
 window.addEventListener('load', function() {
