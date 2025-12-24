@@ -154,33 +154,3 @@ ul ul {
   background: #e83e8c;
   color: white;
 }
-
-.music-btn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: #e83e8c;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  z-index: 1000;
-  transition: background 0.3s;
-}
-
-.music-btn:hover {
-  background: #d63384;
-}
-
-.music-playing {
-  animation: backgroundPulse 4s infinite;
-}
-
-@keyframes backgroundPulse {
-  0%, 100% { background: linear-gradient(135deg, #fce1e7, #f5d0e0); }
-  50% { background: linear-gradient(135deg, #f5d0e0, #fce1e7); }
-}

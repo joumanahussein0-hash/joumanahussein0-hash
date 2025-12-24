@@ -38,27 +38,4 @@ document.addEventListener('DOMContentLoaded', function () {
             content.classList.toggle('show');
         });
     });
-
-    const bgMusic = document.getElementById('bgMusic');
-    const musicBtn = document.getElementById('musicBtn');
-
-    musicBtn.addEventListener('click', function () {
-        if (bgMusic.paused) {
-            bgMusic.play();
-            musicBtn.textContent = '⏸️';
-        } else {
-            bgMusic.pause();
-            musicBtn.textContent = '🎵';
-        }
-    });
-
-    bgMusic.addEventListener('play', function () {
-        document.body.classList.add('music-playing');
-        musicBtn.textContent = '⏸️';
-    });
-
-    bgMusic.addEventListener('pause', function () {
-        document.body.classList.remove('music-playing');
-        musicBtn.textContent = '🎵';
-    });
 });
