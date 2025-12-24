@@ -16,6 +16,33 @@ body {
   margin: 0 auto;
 }
 
+.music-controls {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.music-btn {
+  background: #e83e8c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(232, 62, 140, 0.3);
+}
+
+.music-btn:hover {
+  background: #d63384;
+  transform: translateY(-2px);
+}
+
+.music-btn:active {
+  transform: translateY(0);
+}
+
 h1 {
   text-align: center;
   color: #d63384;

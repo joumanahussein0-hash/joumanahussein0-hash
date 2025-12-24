@@ -4,9 +4,25 @@ document.addEventListener('DOMContentLoaded', function () {
     const linkedinLink = document.getElementById('linkedinLink');
     const githubLink = document.getElementById('githubLink');
     const emailLink = document.querySelector('.email-link');
+    const playMusicBtn = document.getElementById('playMusicBtn');
+    const bgMusic = document.getElementById('bgMusic');
 
     const pinkColor = '#e83e8c';
     const blueColor = '#3b5998';
+
+    let isPlaying = false;
+
+    playMusicBtn.addEventListener('click', function () {
+        if (isPlaying) {
+            bgMusic.pause();
+            playMusicBtn.textContent = '🎵 Play Background Music';
+            isPlaying = false;
+        } else {
+            bgMusic.play();
+            playMusicBtn.textContent = '⏸️ Pause Background Music';
+            isPlaying = true;
+        }
+    });
 
     whatsappIcon.addEventListener('click', function () {
         phoneDisplay.classList.remove('hidden');
