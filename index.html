@@ -6,7 +6,6 @@
   <title>My CV - Joumana Abd-Elkarim</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&display=swap" rel="stylesheet">
-  <script src="script.js" defer></script>
 </head>
 <body>
   <!-- Background Music -->
@@ -31,16 +30,16 @@
       <p><strong>Email:</strong> <a href="mailto:joumanahussein0@gmail.com" class="email-link">joumanahussein0@gmail.com</a></p>
       <p>
         <strong>Phone:</strong> 
-        <img class="social-icon" src="https://cdn-icons-png.flaticon.com/512/1384/1384090.png" alt="WhatsApp" />
-        +20 107 008 4121
+        <img id="whatsappIcon" class="social-icon" src="https://cdn-icons-png.flaticon.com/512/1384/1384090.png" alt="WhatsApp" />
+        <span id="phoneDisplay" class="hidden">+20 107 008 4121</span>
       </p>
       <p>
         <strong>LinkedIn:</strong> 
-        <a href="https://www.linkedin.com/in/joumana-hussein-9a9151395/" target="_blank" class="social-link">https://www.linkedin.com/in/joumana-hussein-9a9151395/</a>
+        <a id="linkedinLink" href="https://www.linkedin.com/in/joumana-hussein-9a9151395/" target="_blank" class="social-link">https://www.linkedin.com/in/joumana-hussein-9a9151395/</a>
       </p>
       <p>
         <strong>GitHub:</strong> 
-        <a href="https://github.com/joumanahussein0-hash" target="_blank" class="social-link">https://github.com/joumanahussein0-hash</a>
+        <a id="githubLink" href="https://github.com/joumanahussein0-hash" target="_blank" class="social-link">https://github.com/joumanahussein0-hash</a>
       </p>
       <p><strong>Languages:</strong> Arabic (Native), English (Fluent – written & spoken), Turkish, Italiano and French</p>
     </section>
@@ -162,5 +161,7 @@
       </div>
     </section>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
